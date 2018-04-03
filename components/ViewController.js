@@ -9,8 +9,8 @@ export default class ViewController extends React.Component {
     super(props);
     this.state = {
       gameStarted: false,
-      playerOne: "Player One",
-      playerTwo: "Player Two",
+      playerOne: "Chris",
+      playerTwo: "Kinsey",
     };
   }
 
@@ -20,6 +20,10 @@ export default class ViewController extends React.Component {
 
   handleBack() {
     this.setState({gameStarted: false,})
+  }
+
+  updatePlayerOne(newName) {
+    this.setState({playerOne: newName});
   }
 
   render() {
@@ -35,6 +39,8 @@ export default class ViewController extends React.Component {
       return(
         <GameSetup
           playerOne={this.state.playerOne}
+          updatePlayerOne={this.updatePlayerOne.bind(this)}
+          playerTwo={this.state.playerTwo}
           handlePress={this.startGame.bind(this)}/>
       );
     }
