@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import PlayerScoreControls from './components/PlayerScoreControls.js';
 
 import ScoreCard from './components/ScoreCard.js';
 
@@ -9,12 +8,12 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <ScoreCard
-          startingScore={30}
+          startingScore={40}
           label="Chris"
         />
       <View style={styles.spacer}></View>
         <ScoreCard
-          startingScore={30}
+          startingScore={40}
           label="Kinsey"
         />
       </View>
