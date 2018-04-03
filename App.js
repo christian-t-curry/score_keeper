@@ -1,13 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import ScoreCard from './components/ScoreCard.js';
-import TwoScores from './components/TwoScores.js';
+import ViewController from './components/ViewController.js';
 
 export default class App extends React.Component {
   render() {
-    return (
-      <TwoScores />
+    return(
+      <ViewController />
     );
   }
 }
