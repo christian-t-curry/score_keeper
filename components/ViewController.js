@@ -18,12 +18,17 @@ export default class ViewController extends React.Component {
     this.setState({gameStarted: true,});
   }
 
+  handleBack() {
+    this.setState({gameStarted: false,})
+  }
+
   render() {
     if (this.state.gameStarted) {
       return (
         <TwoScores
           playerOne={this.state.playerOne}
           playerTwo={this.state.playerTwo}
+          handleBack={this.handleBack.bind(this)}
           />
       );
     } else {
